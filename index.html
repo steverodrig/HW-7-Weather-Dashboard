@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header id="header" class="row">
+            <h1>&#127774;Weather Dashboard&#127774;</h1>
+        </header>
+        <div class="row">
+            <div class="col-sm-5">
+                <div class="row">
+                    <label id="searchText" for="exampleInputEmail1">Search for a City:</label>
+                </div>    
+                <div class="row form-inline">
+                    <input id="searchBox" type="text" class="form-control" aria-describedby="searchCriteria">
+                    <button id="searchBtn" type="button" class="btn btn-primary">&#128269;</button>
+                </div>               
+                <div id="searchHistory" class="row text"></div>
+            </div>
+            <div class="col-sm-7">
+                <div id="dailyCast" class="row"></div>
+                <div id="fiveDay" class="row">
+                    <h2>5-Day Forecast:</h2>
+                </div>
+            </div>
+        </div>
+    </div>    
+</body>
+</html>
+

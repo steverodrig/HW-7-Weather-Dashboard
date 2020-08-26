@@ -6,8 +6,7 @@
     <title>Weather Dashboard</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -15,7 +14,7 @@
             <h1>&#127774;Weather Dashboard&#127774;</h1>
         </header>
         <div class="row">
-            <div class="col-sm-5">
+            <div class="left col-sm-4">
                 <div class="row">
                     <label id="searchText" for="exampleInputEmail1">Search for a City:</label>
                 </div>    
@@ -25,14 +24,23 @@
                 </div>               
                 <div id="searchHistory" class="row text"></div>
             </div>
-            <div class="col-sm-7">
-                <div id="dailyCast" class="row"></div>
-                <div id="fiveDay" class="row">
+            <div class="right col-sm-8">
+                <div id="dailyBox">
+                    <div class="row daily city"></div>    
+                    <div class="row daily temp"></div>    
+                    <div class="row daily humidity"></div>    
+                    <div class="row daily wind"></div>    
+                    <div class="row daily uv"></div>
+                </div>    
+                <div class="row daily">
                     <h2>5-Day Forecast:</h2>
                 </div>
+                <div id="fiveDay" class="row daily"></div>
             </div>
         </div>
-    </div>    
+    </div> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>   
 </body>
 </html>
 

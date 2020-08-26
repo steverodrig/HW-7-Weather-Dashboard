@@ -13,3 +13,20 @@
 #searchBtn {
     box-shadow: 0px 1px  0px 1px rgb(120, 120, 163), 1px 2px 1px 2px rgb(150, 150, 155);
 }
+
+#dailyBox {
+    border: 1px solid black;
+    margin-top: 5px;
+
+}
+
+.daily {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    font-size: x-large;
+}
+
+.left {
+    background-color: rgb(250, 248, 248);
+}

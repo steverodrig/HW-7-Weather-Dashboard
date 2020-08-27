@@ -1,3 +1,7 @@
+#whole {
+    margin: 0px 50px 0px 50px;
+}
+
 #header {
     justify-content: center;
     background-color: rgb(41, 41, 54);
@@ -29,4 +33,21 @@
 
 .left {
     background-color: rgb(250, 248, 248);
+}
+
+.foreBox {
+    margin: 5px 10px;
+    padding: 3px 8px;
+    border-radius: 8px;
+    background-color: rgb(14, 102, 235);
+    color: whitesmoke;
+    font-size: x-large;
+}
+
+.fdate {
+    font-weight: bolder;
+}
+
+.fcast {
+    padding: 3px 0px;
 }

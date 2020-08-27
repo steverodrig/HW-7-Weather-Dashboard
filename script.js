@@ -20,7 +20,7 @@ $("#searchBtn").on("click", function() {
         var iconCode = response.weather[0].icon
         var wIconUrl = "http://openweathermap.org/img/wn/" + iconCode + ".png";
         $(".city").html("<h2>" + response.name + " " + date + " " + "<img src =" + wIconUrl+ " sameSite = none Secure></img>" + "</h2>");
-        $(".temp").text("Temperature: " + temp.toFixed(0) + "\u00B0 F");
+        $(".temp").text("Temp: " + temp.toFixed(0) + "\u00B0 F");
         $(".humidity").text("Humidity: " + response.main.humidity + "\u0025");
         $(".wind").text("Wind speed: " + speed.toFixed(0) + " MPH");
         console.log(response);
@@ -42,8 +42,16 @@ $("#searchBtn").on("click", function() {
 
            var dateDiv = document.createElement("div");
            newFore.append(dateDiv);
-           var dateInfo = results[i].dt_txt;
-           dateDiv.innerHTML = dateInfo;
+           $(dateDiv).addClass("fdate");
+           var newDate = results[i].dt_txt;
+           var utcDate = new Date(newDate);
+           var date = utcDate.getDate();
+           var month = utcDate.getMonth();
+           var year = utcDate.getFullYear();
+           var displayDate = (month+1) + "/" + date + "/" + year;
+           console.log(newDate);
+           console.log(displayDate);
+           dateDiv.innerHTML = displayDate;
            
            var iconDiv = document.createElement("div");
            newFore.append(iconDiv);
@@ -54,11 +62,13 @@ $("#searchBtn").on("click", function() {
            
            var tempDiv = document.createElement("div");
            newFore.append(tempDiv);
+           $(tempDiv).addClass("fcast");
            var tempe = (results[i].main.temp - 273.15) * 1.80 + 32;
-           tempDiv.innerHTML = ("Temperature: " + tempe.toFixed(0) + "\u00B0 F");
+           tempDiv.innerHTML = ("Temp: " + tempe.toFixed(0) + "\u00B0 F");
            
            var humidityDiv = document.createElement("div");
            newFore.append(humidityDiv);
+           $(humidityDiv).addClass("fcast");
            var humidityInfo = results[i].main.humidity;
            humidityDiv.innerHTML = ("Humidity: " + humidityInfo + "\u0025");
            

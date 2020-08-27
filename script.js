@@ -17,7 +17,9 @@ $("#searchBtn").on("click", function() {
         var temp = (response.main.temp - 273.15) * 1.80 + 32;
         var speed = (response.wind.speed * 2.23694);
         var deg = "\u00B0";
-        $(".city").html("<h2>" + response.name + " " + date + " " + response.weather[0].main + "</h2>");
+        var iconCode = response.weather[0].icon
+        var wIconUrl = "http://openweathermap.org/img/wn/" + iconCode + ".png";
+        $(".city").html("<h2>" + response.name + " " + date + " " + "<img src =" + wIconUrl+ " sameSite = none Secure></img>" + "</h2>");
         $(".temp").text("Temperature: " + temp.toFixed(0) + "\u00B0 F");
         $(".humidity").text("Humidity: " + response.main.humidity + "\u0025");
         $(".wind").text("Wind speed: " + speed.toFixed(0) + " MPH");
@@ -45,8 +47,10 @@ $("#searchBtn").on("click", function() {
            
            var iconDiv = document.createElement("div");
            newFore.append(iconDiv);
+           $(iconDiv).addClass("icon");
            var iconInfo = results[i].weather[0].icon;
-           iconDiv.innerHTML = iconInfo;
+           var iconURL = "http://openweathermap.org/img/wn/" + iconInfo + ".png";
+           $(".icon").html("<img src =" + iconURL + " sameSite = none secure></img>");
            
            var tempDiv = document.createElement("div");
            newFore.append(tempDiv);

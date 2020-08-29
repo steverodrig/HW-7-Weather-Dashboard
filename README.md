@@ -11,4 +11,4 @@ forecast.
 * Color coded UV display indicating favorable, moderate, or severe conditions
 
 https://steverodrig.github.io/HW-7-Weather-Dashboard/
-![image](https://user-images.githubusercontent.com/21253903/91648081-d61c6d00-ea28-11ea-880b-66d8af9c12d0.png)
+![image](https://user-images.githubusercontent.com/21253903/91648175-e6811780-ea29-11ea-9517-898e7c5842ad.png)
